@@ -13,12 +13,13 @@ renderTodoList()
 document.getElementById('add').addEventListener('click', function() {
     var value = document.getElementById('item').value;
     if (value) {
-      addItem
+      addItem(value);
     }
 });
 
 document.getElementById('item').addEventListener('keydown', function (e) {
   var value = this.value;
+  console.log(e);
   if (e.code === 'Enter' && value) {
     addItem(value);   
   }
